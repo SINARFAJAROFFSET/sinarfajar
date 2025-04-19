@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sinar Fajar Offset</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background: #f7f7f7;
+      color: #333;
+    }
+
+    header {
+      background: #ffffff;
+      text-align: center;
+      padding: 40px;
+    }
+
+    nav {
+      background-color: #1E750B;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 40px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      background-color: #d62828;
+    }
+
+    .slide-section {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.6s ease, padding 0.4s ease;
+      background: #fff;
+      padding: 0 20px;
+    }
+
+    .slide-section.active {
+      max-height: 1300px;
+      padding: 15px 20px;
+    }
+
+    h2, h3 {
+      color: #d62828;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .contact a {
+      display: inline-block;
+      background: #25D366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact a:hover {
+      background: #1ebe5d;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="kop.jpg" alt="Sinar Fajar Offset" style="max-width: 600px; height: auto;">
+  </header>
+
+  <nav>
+    <a onclick="toggleSlide('tentang')">Tentang Kami</a>
+    <a onclick="toggleSlide('galeri')">Galeri Produk</a>
+    <a onclick="toggleSlide('kontak')">Kontak</a>
+    <a onclick="toggleSlide('pesan')">Info Pemesanan</a>
+  </nav>
+
+  <section id="tentang" class="slide-section">
+    <h3>TENTANG KAMI</h3>
+    <p>Percetakan Sinar Fajar Offset merupakan perusahaan yang bergerak di bidang percetakan yang berlokasi di Mojokerto. Kami memenuhi kebutuhan cetak masyarakat diseluruh wilayah Indonesia, baik skala kecil maupun besar.
+Sejak berdiri sudah lebih dari ribuan eksemplar Kami cetak.
+Berikut layanan jasa cetak Kami seperti  : 
+Kalender Dinding, Kalender Duduk, Kitab, Map Embos,  Brosur,  Sarana Menulis Al-Qur'an, Yearbook/Buku Tahunan Sekolah, Nota, Sertifikat, Id Card, dan produk cetak lainnya.
+Kami berkomitmen menjadi perusahaan cetak yang memberikan pelayanan terbaik dengan kualitas dan hasil cetak yang optimal.</p>
+  </section>
+
+  <section id="galeri" class="slide-section">
+    <h3>GALERI PRODUK</h3>
+    <ul>
+      <li>Kalender Dinding dan Duduk</li>
+      <li>Kitab</li>
+      <li>Map Embos</li>
+      <li>Banner</li>
+      <li>Brosur</li>
+      <li>Buku Tulis Custom</li>
+      <li>Buku Yasin</li>
+      <li>Id-Card</li>
+      <li>Sarana Menulis Al-Qur’an ( Metode Follow The Line )</li>
+      <li>Year Book / Buku Tahunan Sekolah</li>
+      <li>Nota F4 ( Ukuran Custom )</li>
+      <li>Sertifikat</li>
+      <li>Watermark</li>
+      <li>Stiker</li>
+      
+    </ul>
+  </section>
+
+  <section id="kontak" class="slide-section">
+    <h3>KONTAK KAMI</h3>
+    <p><strong>Marketing WhatsApp :</strong> 0857-5550-7457 (Sdr. Mifta)</p>
+    <p><strong>Email :</strong> sinarfajar130193@gmail.com</p>
+    <p><strong>Alamat :</strong> Jl. Raya Diponegoro RT.08 RW.03 Ds. Ngabar, Jetis, Mojokerto, Jawa Timur</p>
+    <p><strong>Jam Operasional :</strong><br>
+      <br>Senin - Jumat : 08.00 - 16.00 WIB</br>
+      <br>Sabtu : 08.00 - 13.00 WIB</br>
+      <br>Minggu & Tanggal Merah : Libur</p>
+  </section>
+
+  <section id="pesan" class="slide-section">
+    <h3>INFO PEMESANAN</h3>
+    <div class="contact">
+      <p>Hubungi kami via WhatsApp untuk pemesanan :</p>
+      <a href="https://wa.me/6285755507457" target="_blank">Chat WhatsApp</a>
+    </div>
+  </section>
+
+  <script>
+    function toggleSlide(id) {
+      const sections = document.querySelectorAll('.slide-section');
+      sections.forEach(sec => {
+        if (sec.id === id) {
+          sec.classList.toggle('active');
+          sec.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          sec.classList.remove('active');
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
